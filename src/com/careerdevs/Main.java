@@ -25,29 +25,32 @@ public class Challenge{
 
 public class Challenge {
     public static int search(int arr[], int item) {
-
+        int index=-1;
+        for(int i=0; i < arr.length;i++){
+            if(arr[i]==item){
+                index = i;
+                i+=arr.length+1;
+            }
+        }
+        return index;
     }
 }
-
         //4
 //Write a function that takes an integer minutes and converts it to seconds.
-//
-//Examples
-
 
 public class Challenge {
-            public static int convert(int minutes) {
-
-      }
+    public static int convert(int minutes) {
+        return minutes * 60;
+    }
 }
 
         //5
 //Write a function that returns the string "something" joined with a space " " and the given argument a.
 
 
- public class Program {
+public class Program {
     public static String giveMeSomething(String a) {
-
+        return "something " + a;
     }
 }
 
