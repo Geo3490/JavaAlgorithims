@@ -59,7 +59,7 @@ public class Program {
 
 public class Challenge {
     public static boolean reverse(boolean b) {
-
+        return !b;
     }
 }
 
@@ -68,7 +68,13 @@ public class Challenge {
 
 public class Program {
     public static int countWords(String s) {
-
+        int count = 0;
+        for (int i = 0; i < s.length(); i++)
+        {
+            if (s.charAt(i) == ' ')
+                count++;
+        }
+        return count + 1;
     }
 }
 
@@ -77,17 +83,27 @@ public class Program {
 
 public class ExistsANumberHigher {
     public static boolean existsHigher(int[] arr, int n) {
-
+        if (arr.length == 0) return false;
+        for (int i : arr) {
+            if (i >= n) return true;
+        }
+        return false;
     }
 }
 
         //9
 //Create a function that takes a string and returns the number (count) of vowels contained within it.
 
+import java.util.*;
+
 public class Vowels {
     public static int getCount(String str) {
         int vowelsCount = 0;
-        // Your code here
+
+        for (char c : str.toLowerCase().toCharArray()) {
+            if (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u')
+                vowelsCount++;
+        }
 
         return vowelsCount;
     }
