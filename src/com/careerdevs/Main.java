@@ -84,8 +84,6 @@ public class Program {
         //8
 //Write a function that returns true if there exists at least one number that is larger than or equal to n.
 
-import java.util.*;
-
 
 public class ExistsANumberHigher {
     public static boolean existsHigher(int[] arr, int n) {
